@@ -60,12 +60,6 @@ sudo service mysql start
 sudo mysql -u root --password="" -e "update mysql.user set authentication_string=password(''), plugin='mysql_native_password' where user='root';"
 sudo mysql -u root --password="" -e "flush privileges;"
 
-#Permission write folder
-sudo usermod -a -G root vagrant
-sudo usermod -a -G vagrant www-data
-
-sudo chmod -R 777 /home/vagrant
-
 # configure phpmyadmin
 #sudo apt-get install phpmyadmin -y
 #sudo cp -r /usr/share/phpmyadmin /var/www/html/
