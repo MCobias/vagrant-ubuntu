@@ -64,6 +64,8 @@ sudo mysql -u root --password="" -e "flush privileges;"
 sudo usermod -a -G root vagrant
 sudo usermod -a -G vagrant www-data
 
+sudo chmod -R 777 /home/vagrant
+
 # configure phpmyadmin
 #sudo apt-get install phpmyadmin -y
 #sudo cp -r /usr/share/phpmyadmin /var/www/html/
