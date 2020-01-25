@@ -2,6 +2,7 @@
 # vi: set ft=ruby :
 Vagrant.configure(2) do |config|
 	config.vm.box = "ubuntu/bionic64"
+  config.disksize.size = '50GB'
 	config.vm.network "forwarded_port", guest: 80, host: 8767
     config.vm.synced_folder "./html/", "/var/www/html", id: "vagrant-data",
         owner: "www-data",
